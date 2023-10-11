@@ -1,0 +1,6 @@
+﻿Technology,Package-Name,Functions,Purpose
+NR,nrdownlink,Tbs(),Calculate TBS 
+NR,nruplink,Pusch(),Calculate PUSCH
+NR,nruplink,UlSinr(),Calculate PUSCH
+NR,nrscheduling,RoundRobin(),Calculate Throughput
+NR,nrpathloss,Macro(),Calculate Macro Path Loss

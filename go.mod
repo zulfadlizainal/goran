@@ -1,3 +1,3 @@
-module module
+module github.com/zulfadlizainal/goran
 
-go 1.21.1
+go 1.21.2

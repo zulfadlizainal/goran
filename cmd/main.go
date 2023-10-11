@@ -1,10 +1,10 @@
 package main
 
 import (
-	"module/pkg/nr/nrdownlink"
-	"module/pkg/nr/nrpathloss"
-	"module/pkg/nr/nrscheduling"
-	"module/pkg/nr/nruplink"
+	"github.com/zulfadlizainal/goran/pkg/nr/nrdownlink"
+	"github.com/zulfadlizainal/goran/pkg/nr/nrpathloss"
+	"github.com/zulfadlizainal/goran/pkg/nr/nrscheduling"
+	"github.com/zulfadlizainal/goran/pkg/nr/nruplink"
 )
 
 func main() {
