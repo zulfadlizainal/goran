@@ -1,4 +1,4 @@
-<span style="background-color: yellow">Experimental: I build this to learn about Go packages. Not ready to be forked for real use yet.</span>
+`Experimental: I build this to learn about Go packages. Not ready to be forked for real use yet.`
 
 # goran
 
@@ -8,11 +8,11 @@ goran is 4G/5G radio access network tools that normally used by telecom RF engin
 
 | Technology | Package-Name | Functions    | Purpose                   |
 |------------|--------------|--------------|---------------------------|
-| NR         | nrdownlink   | Tbs()        | Calculate TBS             |
-| NR         | nruplink     | Pusch()      | Calculate PUSCH           |
-| NR         | nruplink     | UlSinr()     | Calculate PUSCH           |
-| NR         | nrscheduling | RoundRobin() | Calculate Throughput      |
-| NR         | nrpathloss   | Macro()      | Calculate Macro Path Loss |
+| 5G NR      | nrdownlink   | Tbs()        | Calculate TBS             |
+| 5G NR      | nruplink     | Pusch()      | Calculate PUSCH           |
+| 5G NR      | nruplink     | UlSinr()     | Calculate PUSCH           |
+| 5G NR      | nrscheduling | RoundRobin() | Calculate Throughput      |
+| 5G NR      | nrpathloss   | Macro()      | Calculate Macro Path Loss |
 
 ## Installation
 
