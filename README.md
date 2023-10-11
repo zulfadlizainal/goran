@@ -2,7 +2,7 @@
 
 # goran
 
-goran is 4G/5G radio access network tools that normally used by telecom RF engineers. Written in [Go programming language](http://golang.org).
+goran is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in [Go programming language](http://golang.org).
 
 ## Supported Packages
 
