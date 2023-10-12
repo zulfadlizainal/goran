@@ -1,51 +1,87 @@
-# goran
+<span style="line-height: 1.05;">
+<small>
 
-goran is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
+## goran
 
-### Supported Packages
+<mark>goran</mark> is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
 
-| Technology | Package      | Function                      | Purpose                                          |
-|------------|--------------|-------------------------------|--------------------------------------------------|
-| 5G NR      | nrConversion | NumerologyToScs()             | Converts Numerology (µ) to SCS (kHz)             |
-| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
-| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
-| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    | Converts Numerology (µ) to Slot/Frame (Count)    |
-| 5G NR      | nrConversion | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
-| 5G NR      | nrConversion | QCIToPriority()               | Converts 5QI to Priority                         |
-| 5G NR      | nrConversion | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
-| 5G NR      | nrConversion | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
+#### Supported Packages and Functions
 
-### Getting Started
+See packages details at this [link](https://github.com/zulfadlizainal/goran/blob/main/packages.csv).
+
+| Technology | Package      | Function                      |
+|------------|--------------|-------------------------------|
+| 5G NR      | nrConversion | NumerologyToScs()             |
+| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   |
+| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() |
+| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    |
+| 5G NR      | nrConversion | QCIToType()                   |
+| 5G NR      | nrConversion | QCIToPriority()               |
+| 5G NR      | nrConversion | QCIToPacketDelay()            |
+| 5G NR      | nrConversion | QCIToPacketLoss()             |
+
+#### Getting Started
+
+Go to project directory.
+
+```bash
+cd <project-directory>
+```
+
+Initialize Go modules.
 
 ```bash
 go mod init <module-name>
+```
+
+Download <mark>goran</mark> package.
+
+```bash
 go get github.com/zulfadlizainal/goran
 ```
 
-### Examples
+#### Examples
 
-TBD
+To be added.
 
-```bash
+#### Contribution Guidelines
 
-```
-
-### Contribution Guidelines
-
-1. Build only functions that could improve RF engineer workflows - Don't create functions for non-existing problems.
-2. Write comprehensive comments for each functions - Comments will be part of the official docs automatically.
-3. Include test files for each functions - Test values should loop a range of desired and undesired inputs.
+1. Build only functions that could improve RF engineer workflows - don't create functions for non-existing problems.
+2. Write comprehensive comments for each functions - comments will be part of the official docs automatically.
+3. Include test files for each functions - test values should loop a range of desired and undesired inputs.
 4. Include error control for undesired inputs - return value for error is flexible.
 
-### Version Control
+#### Test
+
+Clone repository.
+
+```bash
+git clone github.com/zulfadlizainal/goran
+```
+
+Go to test directory.
+
+```bash
+cd goran/test
+```
+
+Run Go test.
+
+```bash
+go test
+```
+
+#### Version Control
 
 Version X.Y.Z
 
-1. X increment by 1 for major releases. E.g. New technology support, major refactoring, etc.
-2. X = 0 for pre-release (non production ready)
-3. Y increment by 1 for minor releases. E.g. New package support, new function support, new feature support, etc.
-4. Z increment by 1 for bug fixes.
+X = Major releases
+Y = Minor releases
+Z = Bug fixes
 
-### Licenses
+#### Licenses
 
 [GNU AFFERO GENERAL PUBLIC LICENSE](https://github.com/zulfadlizainal/goran/blob/main/LICENSE)
+
+</small>
+</span>
