@@ -3,7 +3,7 @@
 
 ## goran
 
-<mark>goran</mark> is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
+`goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
 
 #### Supported Packages and Functions
 
@@ -34,7 +34,7 @@ Initialize Go modules.
 go mod init <module-name>
 ```
 
-Download <mark>goran</mark> package.
+Download `goran` package.
 
 ```bash
 go get github.com/zulfadlizainal/goran
@@ -46,9 +46,9 @@ To be added.
 
 #### Contribution Guidelines
 
-1. Build only functions that could improve RF engineer workflows - don't create functions for non-existing problems.
-2. Write comprehensive comments for each functions - comments will be part of the official docs automatically.
-3. Include test files for each functions - test values should loop a range of desired and undesired inputs.
+1. Build only to improve RF engineer workflows - don't create functions for non-existing problems.
+2. Write comprehensive comments for each functions - comments will be in official docs automatically.
+3. Include test for each functions - test values should cover range of desired and undesired inputs.
 4. Include error control for undesired inputs - return value for error is flexible.
 
 #### Test
