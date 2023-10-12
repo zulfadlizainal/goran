@@ -1,4 +1,4 @@
-<span style="line-height: 1.05;">
+<span style="line-height: 1;">
 <small>
 
 ## goran
@@ -25,7 +25,7 @@ See packages details at this [link](https://github.com/zulfadlizainal/goran/blob
 | 5G NR      | nrConversion | QCIToPacketLoss()             |
 | 5G NR      | nrConversion | BandwidthToRB()               |
 
-#### Getting Started
+#### Installation
 
 ```bash
 cd <project-directory> # Go to project directory.
@@ -44,21 +44,18 @@ To be updated.
 3. Include test for each functions - test values should cover range of desired and undesired inputs.
 4. Include error control for undesired inputs - return value for error is flexible.
 
-#### Test
+#### Test Packages
 
 ```bash
-git clone github.com/zulfadlizainal/goran # Clone repository.
+git clone github.com/zulfadlizainal/goran.git # Clone repository.
 cd goran/test # Go to test directory.
 go test # Run Go test.
 ```
 
 #### Version Control
 
-Version X.Y.Z
-
-X = Major releases
-Y = Minor releases
-Z = Bug fixes
+Version X.Y.Z<br>
+X = Major releases, Y = Minor releases, Z = Bug fixes.
 
 #### Licenses
 
