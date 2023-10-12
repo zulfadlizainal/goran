@@ -3,15 +3,17 @@
 
 ## goran
 
-`goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
+`goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written as [Go packages](https://pkg.go.dev/github.com/zulfadlizainal/goran).
 
 <br>
-<img src="\assets\logo.png" width=30% height=30% />
+<img src="https://github.com/zulfadlizainal/goran/tree/main/assets/logo.png" width=30% height=30% />
 <br>
 
-#### Supported Packages and Functions
+#### Documentations
 
-See packages details at this [link](https://github.com/zulfadlizainal/goran/blob/main/packages.csv).
+Visit official documentations at [link](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
+
+#### Supported Packages
 
 | Technology | Package      | Function                      |
 |------------|--------------|-------------------------------|
@@ -39,10 +41,10 @@ To be updated.
 
 #### Contribution Guidelines
 
-1. Build only to improve RF engineer workflows - don't create functions for non-existing problems.
-2. Write comprehensive comments for each functions - comments will be in official docs automatically.
-3. Include test for each functions - test values should cover range of desired and undesired inputs.
-4. Include error control for undesired inputs - return value for error is flexible.
+- Build only to improve RF engineer workflows - don't create functions for non-existing problems.
+- Write comprehensive comments for each functions - comments will be in official docs automatically.
+- Include test for each functions - test values should cover range of desired and undesired inputs.
+- Include error control for undesired inputs - return value for error is flexible.
 
 #### Test Packages
 
