@@ -1,0 +1,22 @@
+name: Run on Ubuntu with Go Ver 1.18
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Copy repository to OS environments
+        uses: actions/checkout@v4
+
+      - name: Install go-version 1.18
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.18'
+
+      - name: Test
+        run: go test ./...
