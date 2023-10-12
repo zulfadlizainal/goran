@@ -3,7 +3,7 @@
 
 ## goran
 
-`goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written as Go packages. Visit official landing page for `goran` [here](https://pkg.go.dev/github.com/zulfadlizainal/goran).
+`goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers written in Go. Visit official landing page for `goran` packages [here](https://pkg.go.dev/github.com/zulfadlizainal/goran).
 
 <br>
 <img src="https://raw.githubusercontent.com/zulfadlizainal/goran/main/assets/logo.png" width=30% height=30% />
@@ -11,7 +11,7 @@
 
 #### Documentations
 
-Visit official documentations at [link](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
+Visit official documentations at this [link](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
 
 #### Supported Packages
 
