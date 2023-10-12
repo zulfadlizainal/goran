@@ -5,45 +5,37 @@
 
 `goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
 
+<br>
+<img src="\assets\logo.png" width=30% height=30% />
+<br>
+
 #### Supported Packages and Functions
 
 See packages details at this [link](https://github.com/zulfadlizainal/goran/blob/main/packages.csv).
 
-| Technology | Package      | Function                      | Purpose                                          |
-|------------|--------------|-------------------------------|--------------------------------------------------|
-| 5G NR      | nrConversion | NumerologyToScs()             | Converts Numerology (µ) to SCS (kHz)             |
-| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
-| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
-| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    | Converts Numerology (µ) to Slot/Frame (Count)    |
-| 5G NR      | nrConversion | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
-| 5G NR      | nrConversion | QCIToPriority()               | Converts 5QI to Priority                         |
-| 5G NR      | nrConversion | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
-| 5G NR      | nrConversion | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
-| 5G NR      | nrConversion | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
+| Technology | Package      | Function                      |
+|------------|--------------|-------------------------------|
+| 5G NR      | nrConversion | NumerologyToScs()             |
+| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   |
+| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() |
+| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    |
+| 5G NR      | nrConversion | QCIToType()                   |
+| 5G NR      | nrConversion | QCIToPriority()               |
+| 5G NR      | nrConversion | QCIToPacketDelay()            |
+| 5G NR      | nrConversion | QCIToPacketLoss()             |
+| 5G NR      | nrConversion | BandwidthToRB()               |
 
 #### Getting Started
 
-Go to project directory.
-
 ```bash
-cd <project-directory>
-```
-  
-Initialize Go modules.
-
-```bash
-go mod init <module-name>
-```
-
-Download `goran` package.
-
-```bash
-go get github.com/zulfadlizainal/goran
+cd <project-directory> # Go to project directory.
+go mod init <module-name> # Initialize Go modules.
+go get github.com/zulfadlizainal/goran # Download `goran` package.
 ```
 
 #### Examples
 
-To be added.
+To be updated.
 
 #### Contribution Guidelines
 
@@ -54,22 +46,10 @@ To be added.
 
 #### Test
 
-Clone repository.
-
 ```bash
-git clone github.com/zulfadlizainal/goran
-```
-
-Go to test directory.
-
-```bash
-cd goran/test
-```
-
-Run Go test.
-
-```bash
-go test
+git clone github.com/zulfadlizainal/goran # Clone repository.
+cd goran/test # Go to test directory.
+go test # Run Go test.
 ```
 
 #### Version Control
