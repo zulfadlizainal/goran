@@ -3,7 +3,7 @@ package nrConversion
 import (
 	"testing"
 
-	"github.com/zulfadlizainal/goran/pkg/nr/nrConversion"
+	"github.com/zulfadlizainal/goran/pkg/nrConversion"
 )
 
 func TestNumerologyToScs(t *testing.T) {

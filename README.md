@@ -3,22 +3,23 @@
 
 ## goran
 
-<mark>goran</mark> is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
+`goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers. Written in Go.
 
 #### Supported Packages and Functions
 
 See packages details at this [link](https://github.com/zulfadlizainal/goran/blob/main/packages.csv).
 
-| Technology | Package      | Function                      |
-|------------|--------------|-------------------------------|
-| 5G NR      | nrConversion | NumerologyToScs()             |
-| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   |
-| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() |
-| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    |
-| 5G NR      | nrConversion | QCIToType()                   |
-| 5G NR      | nrConversion | QCIToPriority()               |
-| 5G NR      | nrConversion | QCIToPacketDelay()            |
-| 5G NR      | nrConversion | QCIToPacketLoss()             |
+| Technology | Package      | Function                      | Purpose                                          |
+|------------|--------------|-------------------------------|--------------------------------------------------|
+| 5G NR      | nrConversion | NumerologyToScs()             | Converts Numerology (µ) to SCS (kHz)             |
+| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
+| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
+| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    | Converts Numerology (µ) to Slot/Frame (Count)    |
+| 5G NR      | nrConversion | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
+| 5G NR      | nrConversion | QCIToPriority()               | Converts 5QI to Priority                         |
+| 5G NR      | nrConversion | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
+| 5G NR      | nrConversion | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
+| 5G NR      | nrConversion | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
 
 #### Getting Started
 
@@ -27,14 +28,14 @@ Go to project directory.
 ```bash
 cd <project-directory>
 ```
-
+  
 Initialize Go modules.
 
 ```bash
 go mod init <module-name>
 ```
 
-Download <mark>goran</mark> package.
+Download `goran` package.
 
 ```bash
 go get github.com/zulfadlizainal/goran
@@ -46,9 +47,9 @@ To be added.
 
 #### Contribution Guidelines
 
-1. Build only functions that could improve RF engineer workflows - don't create functions for non-existing problems.
-2. Write comprehensive comments for each functions - comments will be part of the official docs automatically.
-3. Include test files for each functions - test values should loop a range of desired and undesired inputs.
+1. Build only to improve RF engineer workflows - don't create functions for non-existing problems.
+2. Write comprehensive comments for each functions - comments will be in official docs automatically.
+3. Include test for each functions - test values should cover range of desired and undesired inputs.
 4. Include error control for undesired inputs - return value for error is flexible.
 
 #### Test
