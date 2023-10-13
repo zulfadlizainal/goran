@@ -1,4 +1,4 @@
-name: Run on Ubuntu with Go Ver 1.21
+name: Run on Ubuntu with Go Version 1.21
 
 on:
   push:
@@ -6,14 +6,15 @@ on:
       - main
 
 jobs:
-  test:
+  version_test: # Job name
     runs-on: ubuntu-latest
+    name: Install Ubuntu
 
     steps:
       - name: Copy repository to OS environments
         uses: actions/checkout@v4
 
-      - name: Install go-version 1.21
+      - name: Install Go version 1.21
         uses: actions/setup-go@v4
         with:
           go-version: '1.21'
