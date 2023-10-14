@@ -5,6 +5,8 @@
 
 `goran` is 5G radio access network tools that commonly used by telecom RF engineers written in Go. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran).
 
+[![CI](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml/badge.svg)](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml)
+
 <br>
 <img src="https://raw.githubusercontent.com/zulfadlizainal/goran/main/assets/logo.png" width=30% height=30% />
 <br>
@@ -15,7 +17,21 @@ Visit official documentations [here](https://pkg.go.dev/github.com/zulfadlizaina
 
 #### Supported Packages
 
-All supported packages and functions maintained by this library is listed [here](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages.md).
+All supported packages and functions maintained by this library is listed [here](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages_index.md).
+
+```markdown
+| Package      | Function                      |
+|--------------|-------------------------------|
+| nrConversion | NumerologyToScs()             |
+| nrConversion | NumerologyToSymbolPerSlot()   |
+| nrConversion | NumerologyToSlotPerSubframe() |
+| nrConversion | NumerologyToSlotPerFrame()    |
+| nrConversion | QCIToType()                   |
+| nrConversion | QCIToPriority()               |
+| nrConversion | QCIToPacketDelay()            |
+| nrConversion | QCIToPacketLoss()             |
+| nrConversion | BandwidthToRB()               |
+```
 
 #### Examples
 
