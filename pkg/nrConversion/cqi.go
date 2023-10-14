@@ -1,8 +1,8 @@
 package nrConversion
 
-// QCI represents data structures for 5QI table properties.
-type QCI struct {
-	ID                      int
+// QCIRequirements represents data structures for 5QI table with its requirements properties.
+type QCIRequirements struct {
+	Qci                     int
 	ResourceType            string
 	PriorityLevel           float64
 	PacketDelayBudget       int
@@ -13,7 +13,7 @@ type QCI struct {
 }
 
 // 3GPP TS 23.501 - Table 5.7.4-1.
-var QCITable = []QCI{
+var QCITable = []QCIRequirements{
 	{1, "GBR", 2, 100, 1e-2, nil, nil, "Conversational Voice"},
 	{2, "GBR", 4, 150, 1e-3, nil, nil, "Conversational Video"},
 	{3, "GBR", 3, 50, 1e-3, nil, nil, "Real Time Gaming"},
@@ -40,9 +40,9 @@ var QCITable = []QCI{
 // QCIToType converts the 5QI (Index) input to Resource Type value based on the 3GPP TS 23.501 - Table 5.7.4-1.
 // The function will return -1 error if the input is out of range.
 func QCIToType(qci int) string {
-	for _, QCI := range QCITable {
-		if QCI.ID == qci {
-			return QCI.ResourceType
+	for _, QCIRequirements := range QCITable {
+		if QCIRequirements.Qci == qci {
+			return QCIRequirements.ResourceType
 		}
 	}
 	return "-1"
@@ -51,9 +51,9 @@ func QCIToType(qci int) string {
 // QCIToPriority converts the 5QI (Index) input to Priority Level value based on the 3GPP TS 23.501 - Table 5.7.4-1.
 // The function will return -1 error if the input is out of range.
 func QCIToPriority(qci int) float64 {
-	for _, QCI := range QCITable {
-		if QCI.ID == qci {
-			return QCI.PriorityLevel
+	for _, QCIRequirements := range QCITable {
+		if QCIRequirements.Qci == qci {
+			return QCIRequirements.PriorityLevel
 		}
 	}
 	return -1
@@ -62,9 +62,9 @@ func QCIToPriority(qci int) float64 {
 // QCIToPacketDelay converts the 5QI (Index) input to Packet Delay Budget (ms) value based on the 3GPP TS 23.501 - Table 5.7.4-1.
 // The function will return -1 error if the input is out of range.
 func QCIToPacketDelay(qci int) int {
-	for _, QCI := range QCITable {
-		if QCI.ID == qci {
-			return QCI.PacketDelayBudget
+	for _, QCIRequirements := range QCITable {
+		if QCIRequirements.Qci == qci {
+			return QCIRequirements.PacketDelayBudget
 		}
 	}
 	return -1
@@ -73,9 +73,9 @@ func QCIToPacketDelay(qci int) int {
 // QCIToPacketLoss converts the 5QI (Index) input to Packet Error Loss (%) value based on the 3GPP TS 23.501 - Table 5.7.4-1.
 // The function will return -1 error if the input is out of range.
 func QCIToPacketLoss(qci int) float64 {
-	for _, QCI := range QCITable {
-		if QCI.ID == qci {
-			return QCI.PacketErrorLoss
+	for _, QCIRequirements := range QCITable {
+		if QCIRequirements.Qci == qci {
+			return QCIRequirements.PacketErrorLoss
 		}
 	}
 	return -1
