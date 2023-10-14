@@ -1,8 +1,8 @@
 package nrConversion
 
-// BandwidthRB represents data structures for bandwidth resource block properties.
+// BandwidthRb represents data structures for bandwidth and resource block properties per SCS.
 type BandwidthRb struct {
-	ID          int
+	Bw          int
 	RbFr1Scs15  interface{}
 	RbFr1Scs30  interface{}
 	RbFr1Scs60  interface{}
@@ -11,7 +11,7 @@ type BandwidthRb struct {
 }
 
 // 3GPP TS 38.101-1 Table 5.3.2-1.
-var BwRbTable = []BandwidthRb{
+var BandwidthRbTable = []BandwidthRb{
 	{5, 25, 11, nil, nil, nil},
 	{10, 52, 24, 11, nil, nil},
 	{15, 79, 38, 18, nil, nil},
@@ -27,7 +27,7 @@ var BwRbTable = []BandwidthRb{
 	{400, nil, nil, nil, nil, 264},
 }
 
-// Frequency ranges constant
+// Frequency ranges constant for FR1 (Sub6) and FR2 (MmWave).
 const (
 	Sub6   = "Sub6"
 	MmWave = "mmWave"
@@ -36,8 +36,8 @@ const (
 // BandwidthToRB converts the Bandwidth (MHz) input to RB (Count) value based on the 3GPP TS 38.101-1 Table 5.3.2-1.
 // The function will return -1 error if the input is out of range.
 func BandwidthToRB(bandwidth int, ranges string, scs int) interface{} {
-	for _, BandwidthRb := range BwRbTable {
-		if BandwidthRb.ID == bandwidth {
+	for _, BandwidthRb := range BandwidthRbTable {
+		if BandwidthRb.Bw == bandwidth {
 			if ranges == Sub6 {
 				if scs == 15 {
 					return BandwidthRb.RbFr1Scs15

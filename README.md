@@ -3,7 +3,7 @@
 
 ## goran
 
-`goran` is 4G/5G radio access network tools that commonly used by telecom RF engineers written in Go. Visit official landing page for `goran` packages <a href="https://pkg.go.dev/github.com/zulfadlizainal/goran" target="_blank">here</a>.
+`goran` is 5G radio access network tools that commonly used by telecom RF engineers written in Go. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran).
 
 <br>
 <img src="https://raw.githubusercontent.com/zulfadlizainal/goran/main/assets/logo.png" width=30% height=30% />
@@ -11,21 +11,11 @@
 
 #### Documentations
 
-Visit official documentations at this <a href="https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg" target="_blank">link</a>.
+Visit official documentations [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
 
 #### Supported Packages
 
-| Technology | Package      | Function                      |
-|------------|--------------|-------------------------------|
-| 5G NR      | nrConversion | NumerologyToScs()             |
-| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   |
-| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() |
-| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    |
-| 5G NR      | nrConversion | QCIToType()                   |
-| 5G NR      | nrConversion | QCIToPriority()               |
-| 5G NR      | nrConversion | QCIToPacketDelay()            |
-| 5G NR      | nrConversion | QCIToPacketLoss()             |
-| 5G NR      | nrConversion | BandwidthToRB()               |
+All supported packages and functions maintained by this library is listed [here](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages.md).
 
 #### Examples
 
@@ -49,15 +39,17 @@ go test # Run Go test.
 
 #### Contribution Guidelines
 
-- Build only to improve RF engineer workflows - don't create functions for non-existing problems.
-- Write comprehensive comments for each functions - comments will be in official docs automatically.
-- Include test for each functions - test values should cover range of desired and undesired inputs.
-- Include error control for undesired inputs - return value for error is flexible.
+```markdown
+# What to Build
+1. Flexible. No explicit roadmap. Build functions to address common RF engineers workflow.
+2. Avoid functions creation for non-existing problems.
 
-#### Version Control
-
-Version X.Y.Z<br>
-X = Major releases, Y = Minor releases, Z = Bug fixes.
+# Coding Standards
+1. Include comprehensive comments for the codes. Documentation is automated based on the comments.
+2. Include test for each functions with desired and undesired input.
+3. Include error control for undesired inputs. Return value for error is flexible but need to specify.
+4. Lint code using official go.dev linter.
+```
 
 #### Licenses
 

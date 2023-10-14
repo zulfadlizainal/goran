@@ -1,9 +1,9 @@
 package nrConversion
 
-// NumerologyFreqDomain represents data structures for Numerology conversion to frequency domain properties.
+// NumerologyFreqDomain represents data structures for Numerology with its frequency domain properties.
 type NumerologyFreqDomain struct {
-	ID  int
-	Scs int
+	Numerology int
+	Scs        int
 }
 
 // 3GPP TS 38.300 Table 5.1-1.
@@ -19,16 +19,16 @@ var NumerologyToScsTable = []NumerologyFreqDomain{
 // The function will return -1 error if the input is out of range.
 func NumerologyToScs(numerology int) int {
 	for _, NumerologyFreqDomain := range NumerologyToScsTable {
-		if NumerologyFreqDomain.ID == numerology {
+		if NumerologyFreqDomain.Numerology == numerology {
 			return NumerologyFreqDomain.Scs
 		}
 	}
 	return -1
 }
 
-// NumerologyTimeDomain represents data structures for Numerology conversion to time domain properties.
+// NumerologyTimeDomain represents data structures for Numerology with its time domain properties.
 type NumerologyTimeDomain struct {
-	ID              int
+	Numerology      int
 	SymbolPerSlot   int
 	SlotPerSubframe int
 	SlotPerFrame    int
@@ -49,7 +49,7 @@ var NumerologyToTimeTable = []NumerologyTimeDomain{
 // The function will return -1 error if the input is out of range.
 func NumerologyToSymbolPerSlot(numerology int) int {
 	for _, NumerologyTimeDomain := range NumerologyToTimeTable {
-		if NumerologyTimeDomain.ID == numerology {
+		if NumerologyTimeDomain.Numerology == numerology {
 			return NumerologyTimeDomain.SymbolPerSlot
 		}
 	}
@@ -60,7 +60,7 @@ func NumerologyToSymbolPerSlot(numerology int) int {
 // The function will return -1 error if the input is out of range.
 func NumerologyToSlotPerSubframe(numerology int) int {
 	for _, NumerologyTimeDomain := range NumerologyToTimeTable {
-		if NumerologyTimeDomain.ID == numerology {
+		if NumerologyTimeDomain.Numerology == numerology {
 			return NumerologyTimeDomain.SlotPerSubframe
 		}
 	}
@@ -71,7 +71,7 @@ func NumerologyToSlotPerSubframe(numerology int) int {
 // The function will return -1 error if the input is out of range.
 func NumerologyToSlotPerFrame(numerology int) int {
 	for _, NumerologyTimeDomain := range NumerologyToTimeTable {
-		if NumerologyTimeDomain.ID == numerology {
+		if NumerologyTimeDomain.Numerology == numerology {
 			return NumerologyTimeDomain.SlotPerFrame
 		}
 	}

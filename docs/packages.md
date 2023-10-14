@@ -1,6 +1,3 @@
-<span style="line-height: 1;">
-<small>
-
 #### Supported Packages
 
 | Technology | Package      | Function                      | Purpose                                          |
@@ -14,6 +11,3 @@
 | 5G NR      | nrConversion | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
 | 5G NR      | nrConversion | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
 | 5G NR      | nrConversion | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
-
-</small>
-</span>
