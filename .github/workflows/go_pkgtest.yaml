@@ -1,7 +1,11 @@
-name: Tested on Ubuntu with Go Version 1.21
+name: CI
 
 on:
   push:
+    branches:
+      - main
+      - development
+  pull_request:
     branches:
       - main
 

@@ -15,7 +15,21 @@ Visit official documentations [here](https://pkg.go.dev/github.com/zulfadlizaina
 
 #### Supported Packages
 
-All supported packages and functions maintained by this library is listed [here](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages.md).
+All supported packages and functions maintained by this library is listed [here](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages_index.md).
+
+```markdown
+| Package      | Function                      |
+|--------------|-------------------------------|
+| nrConversion | NumerologyToScs()             |
+| nrConversion | NumerologyToSymbolPerSlot()   |
+| nrConversion | NumerologyToSlotPerSubframe() |
+| nrConversion | NumerologyToSlotPerFrame()    |
+| nrConversion | QCIToType()                   |
+| nrConversion | QCIToPriority()               |
+| nrConversion | QCIToPacketDelay()            |
+| nrConversion | QCIToPacketLoss()             |
+| nrConversion | BandwidthToRB()               |
+```
 
 #### Examples
 
