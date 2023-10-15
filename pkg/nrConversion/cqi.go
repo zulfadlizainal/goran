@@ -1,19 +1,22 @@
+// nrConversion is a package that converts 5G NR properties from 3GPP pre-defined tables or formulas.
 package nrConversion
 
-// QCIRequirements represents data structures for 5QI table with its requirements properties.
-type QCIRequirements struct {
-	Qci                     int
-	ResourceType            string
-	PriorityLevel           float64
-	PacketDelayBudget       int
-	PacketErrorLoss         float64
-	MaximumBurstSize        interface{}
-	DataRateAveragingWindow interface{}
-	Services                string
+// QciQos represents data structures for 5QI table with its Qos requirements.
+// The data structures associated to variable QciQosTable.
+type QciQos struct {
+	Qci                     int         // 5qi
+	ResourceType            string      // gbr or non-gbr
+	PriorityLevel           float64     // level
+	PacketDelayBudget       int         // ms
+	PacketErrorLoss         float64     // %
+	MaximumBurstSize        interface{} // bytes
+	DataRateAveragingWindow interface{} // ms
+	Services                string      // services
 }
 
-// 3GPP TS 23.501 - Table 5.7.4-1.
-var QCITable = []QCIRequirements{
+// QciQosTable is based on 3GPP TS 23.501 - Table 5.7.4-1.
+// The table associated to type QciQos.
+var QciQosTable = []QciQos{
 	{1, "GBR", 2, 100, 1e-2, nil, nil, "Conversational Voice"},
 	{2, "GBR", 4, 150, 1e-3, nil, nil, "Conversational Video"},
 	{3, "GBR", 3, 50, 1e-3, nil, nil, "Real Time Gaming"},
@@ -37,10 +40,12 @@ var QCITable = []QCIRequirements{
 	{85, "GBR (Delay Critical)", 2.1, 6, 1e-5, 255, 2.0, "Electricity Distribution – High Volt, Remote Control"},
 }
 
-// QCIToType converts the 5QI (Index) input to Resource Type value based on the 3GPP TS 23.501 - Table 5.7.4-1.
-// The function will return -1 error if the input is out of range.
+// QCIToType converts the 5QI to Resource Type based on QciQosTable.
+//   - qci refers to Qci within the range of QciQosTable.
+//   - The function will return ResourceType within the range of QciQosTable.
+//   - The function will return -1 error if the input is out of range.
 func QCIToType(qci int) string {
-	for _, QCIRequirements := range QCITable {
+	for _, QCIRequirements := range QciQosTable {
 		if QCIRequirements.Qci == qci {
 			return QCIRequirements.ResourceType
 		}
@@ -48,10 +53,12 @@ func QCIToType(qci int) string {
 	return "-1"
 }
 
-// QCIToPriority converts the 5QI (Index) input to Priority Level value based on the 3GPP TS 23.501 - Table 5.7.4-1.
-// The function will return -1 error if the input is out of range.
+// QCIToPriority converts the 5QI to Priority Level based on QciQosTable.
+//   - qci refers to Qci within the range of QciQosTable.
+//   - The function will return PriorityLevel within the range of QciQosTable.
+//   - The function will return -1 error if the input is out of range.
 func QCIToPriority(qci int) float64 {
-	for _, QCIRequirements := range QCITable {
+	for _, QCIRequirements := range QciQosTable {
 		if QCIRequirements.Qci == qci {
 			return QCIRequirements.PriorityLevel
 		}
@@ -59,10 +66,12 @@ func QCIToPriority(qci int) float64 {
 	return -1
 }
 
-// QCIToPacketDelay converts the 5QI (Index) input to Packet Delay Budget (ms) value based on the 3GPP TS 23.501 - Table 5.7.4-1.
-// The function will return -1 error if the input is out of range.
+// QCIToPacketDelay converts the 5QI to Packet Delay Budget based on QciQosTable.
+//   - qci refers to Qci within the range of QciQosTable.
+//   - The function will return PacketDelayBudget within the range of QciQosTable.
+//   - The function will return -1 error if the input is out of range.
 func QCIToPacketDelay(qci int) int {
-	for _, QCIRequirements := range QCITable {
+	for _, QCIRequirements := range QciQosTable {
 		if QCIRequirements.Qci == qci {
 			return QCIRequirements.PacketDelayBudget
 		}
@@ -70,10 +79,12 @@ func QCIToPacketDelay(qci int) int {
 	return -1
 }
 
-// QCIToPacketLoss converts the 5QI (Index) input to Packet Error Loss (%) value based on the 3GPP TS 23.501 - Table 5.7.4-1.
-// The function will return -1 error if the input is out of range.
+// QCIToPacketLoss converts the 5QI to Packet Error Loss based on QciQosTable.
+//   - qci refers to Qci within the range of QciQosTable.
+//   - The function will return PacketErrorLoss within the range of QciQosTable.
+//   - The function will return -1 error if the input is out of range.
 func QCIToPacketLoss(qci int) float64 {
-	for _, QCIRequirements := range QCITable {
+	for _, QCIRequirements := range QciQosTable {
 		if QCIRequirements.Qci == qci {
 			return QCIRequirements.PacketErrorLoss
 		}
