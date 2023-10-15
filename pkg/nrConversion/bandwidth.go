@@ -1,16 +1,19 @@
+// nrConversion is a package that converts 5G NR properties from 3GPP pre-defined tables or formulas.
 package nrConversion
 
-// BandwidthRb represents data structures for bandwidth and resource block properties per SCS.
+// BandwidthRb represents data structures for Bandwidth table with its RB count.
+// The data structures associated to variable BandwidthRbTable.
 type BandwidthRb struct {
-	Bw          int
-	RbFr1Scs15  interface{}
-	RbFr1Scs30  interface{}
-	RbFr1Scs60  interface{}
-	RbFr2Scs60  interface{}
-	RbFr2Scs120 interface{}
+	Bw          int         // MHz
+	RbFr1Scs15  interface{} // rb count fr1 scs 15
+	RbFr1Scs30  interface{} // rb count fr1 scs 30
+	RbFr1Scs60  interface{} // rb count fr1 scs 60
+	RbFr2Scs60  interface{} // rb count fr2 scs 60
+	RbFr2Scs120 interface{} // rb count fr2 scs 120
 }
 
-// 3GPP TS 38.101-1 Table 5.3.2-1.
+// BandwidthRbTable is based on 3GPP TS 38.101-1 Table 5.3.2-1.
+// The table associated to type BandwidthRb.
 var BandwidthRbTable = []BandwidthRb{
 	{5, 25, 11, nil, nil, nil},
 	{10, 52, 24, 11, nil, nil},
@@ -27,29 +30,41 @@ var BandwidthRbTable = []BandwidthRb{
 	{400, nil, nil, nil, nil, 264},
 }
 
-// Frequency ranges constant for FR1 (Sub6) and FR2 (MmWave).
+// Frequency Ranges constant.
 const (
-	Sub6   = "Sub6"
-	MmWave = "mmWave"
+	Sub6   = "Sub6"   // FR1
+	MmWave = "mmWave" // FR2
 )
 
-// BandwidthToRB converts the Bandwidth (MHz) input to RB (Count) value based on the 3GPP TS 38.101-1 Table 5.3.2-1.
-// The function will return -1 error if the input is out of range.
-func BandwidthToRB(bandwidth int, ranges string, scs int) interface{} {
+// Sub Carrier Spacing constant.
+const (
+	Scs15  = 15  // kHz
+	Scs30  = 30  // kHz
+	Scs60  = 60  // kHz
+	Scs120 = 120 // kHz
+)
+
+// BandwidthToRB converts the Bandwidth to RB count based on BandwidthRbTable.
+//   - bandwidth refers to Bw within the range of BandwidthRbTable.
+//   - fr refers to Frequency Ranges const.
+//   - scs refers to Sub Carrier Spacing const.
+//   - The function will return RB count within the range of BandwidthRbTable.
+//   - The function will return -1 error if the input is out of range.
+func BandwidthToRB(bandwidth int, fr string, scs int) interface{} {
 	for _, BandwidthRb := range BandwidthRbTable {
 		if BandwidthRb.Bw == bandwidth {
-			if ranges == Sub6 {
-				if scs == 15 {
+			if fr == Sub6 {
+				if scs == Scs15 {
 					return BandwidthRb.RbFr1Scs15
-				} else if scs == 30 {
+				} else if scs == Scs30 {
 					return BandwidthRb.RbFr1Scs30
-				} else if scs == 60 {
+				} else if scs == Scs60 {
 					return BandwidthRb.RbFr1Scs60
 				}
-			} else if ranges == MmWave {
-				if scs == 60 {
+			} else if fr == MmWave {
+				if scs == Scs60 {
 					return BandwidthRb.RbFr2Scs60
-				} else if scs == 120 {
+				} else if scs == Scs120 {
 					return BandwidthRb.RbFr2Scs120
 				}
 			}
