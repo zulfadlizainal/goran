@@ -3,7 +3,7 @@
 
 ## goran
 
-`goran` is 5G radio access network tools that commonly used by telecom RF engineers written in Go. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran).
+`goran` is 5G NR radio access network tools that commonly used by telecom RF engineers. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran). The project is written in Go.
 
 [![CI](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml/badge.svg)](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml)
 
@@ -13,37 +13,59 @@
 
 #### Documentations
 
-Visit official documentations [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
+Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
 
 #### Supported Packages
 
-All supported packages and functions maintained by this library is listed [here](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages_index.md).
+[Packages Index](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages_index.md) list.
 
-```markdown
-| Package      | Function                      |
-|--------------|-------------------------------|
-| nrConversion | NumerologyToScs()             |
-| nrConversion | NumerologyToSymbolPerSlot()   |
-| nrConversion | NumerologyToSlotPerSubframe() |
-| nrConversion | NumerologyToSlotPerFrame()    |
-| nrConversion | QCIToType()                   |
-| nrConversion | QCIToPriority()               |
-| nrConversion | QCIToPacketDelay()            |
-| nrConversion | QCIToPacketLoss()             |
-| nrConversion | BandwidthToRB()               |
+#### Getting Started
+
+Installation:
+
+```bash
+# Go to project directory.
+cd <project-directory> 
+
+# Initialize Go modules.
+go mod init <module-name> 
+
+# Download `goran` package.
+go get github.com/zulfadlizainal/goran 
+```
+
+Using it in your project:
+
+```go
+package main
+
+import (
+	"fmt"
+
+	// Import goran package
+	// "github.com/zulfadlizainal/goran/pkg/<package-name>"
+	"github.com/zulfadlizainal/goran/pkg/nrConversion"
+)
+
+func main() {
+
+	// Call function from the package
+	numerology := 1
+	scs := nrConversion.NumerologyToScs(numerology)
+	fmt.Printf("SCS for Numerology %d is: %d kHz\n", numerology, scs)
+
+}
+```
+
+Once in a while, update the package to the latest version:
+
+```bash
+go get -u github.com/zulfadlizainal/goran
 ```
 
 #### Examples
 
 To be updated.
-
-#### Installation
-
-```bash
-cd <project-directory> # Go to project directory.
-go mod init <module-name> # Initialize Go modules.
-go get github.com/zulfadlizainal/goran # Download `goran` package.
-```
 
 #### Test Packages
 
@@ -57,8 +79,9 @@ go test # Run Go test.
 
 ```markdown
 # What to Build
-1. Flexible. No explicit roadmap. Build functions to address common RF engineers workflow.
-2. Avoid functions creation for non-existing problems.
+1. Flexible. No explicit roadmap. 
+2. Build functions to address common RF engineers workflow.
+3. Avoid functions creation for non-existing problems.
 
 # Coding Standards
 1. Include comprehensive comments for the codes. Documentation is automated based on the comments.
@@ -69,7 +92,7 @@ go test # Run Go test.
 
 #### Licenses
 
-[GNU AFFERO GENERAL PUBLIC LICENSE](https://github.com/zulfadlizainal/goran/blob/main/LICENSE)
+[GNU AFFERO GENERAL PUBLIC LICENSE](https://github.com/zulfadlizainal/goran/blob/main/LICENSE).
 
 </small>
 </span>
