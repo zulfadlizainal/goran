@@ -1,5 +1,6 @@
-// nrConversion is a package that converts 5G NR properties from 3GPP pre-defined tables or formulas.
 package nrConversion
+
+import "errors"
 
 // BandwidthRb represents data structures for Bandwidth table with its RB count.
 // The data structures associated to variable BandwidthRbTable.
@@ -49,26 +50,25 @@ const (
 //   - fr refers to Frequency Ranges const.
 //   - scs refers to Sub Carrier Spacing const.
 //   - The function will return RB count within the range of BandwidthRbTable.
-//   - The function will return -1 error if the input is out of range.
-func BandwidthToRB(bandwidth int, fr string, scs int) interface{} {
+func BandwidthToRB(bandwidth int, fr string, scs int) (interface{}, error) {
 	for _, BandwidthRb := range BandwidthRbTable {
 		if BandwidthRb.Bw == bandwidth {
 			if fr == Sub6 {
 				if scs == Scs15 {
-					return BandwidthRb.RbFr1Scs15
+					return BandwidthRb.RbFr1Scs15, nil
 				} else if scs == Scs30 {
-					return BandwidthRb.RbFr1Scs30
+					return BandwidthRb.RbFr1Scs30, nil
 				} else if scs == Scs60 {
-					return BandwidthRb.RbFr1Scs60
+					return BandwidthRb.RbFr1Scs60, nil
 				}
 			} else if fr == MmWave {
 				if scs == Scs60 {
-					return BandwidthRb.RbFr2Scs60
+					return BandwidthRb.RbFr2Scs60, nil
 				} else if scs == Scs120 {
-					return BandwidthRb.RbFr2Scs120
+					return BandwidthRb.RbFr2Scs120, nil
 				}
 			}
 		}
 	}
-	return -1
+	return nil, errors.New("out of range")
 }

@@ -49,10 +49,17 @@ import (
 
 func main() {
 
+	bandwidth := 10
+	fr := "Sub6"
+	scs := 30 
+
 	// Call function from the package
-	numerology := 1
-	scs := nrConversion.NumerologyToScs(numerology)
-	fmt.Printf("SCS for Numerology %d is: %d kHz\n", numerology, scs)
+	rbCount, err := nrConversion.BandwidthToRB(bandwidth, fr, scs)
+	if err != nil {
+		fmt.Printf(err)
+	} else {
+		fmt.Printf("RB count for %d MHz bandwidth in %s with %d kHz SCS: %v\n", bandwidth, fr, scs, rbCount)
+	}
 
 }
 ```

@@ -1,4 +1,3 @@
-// nrConversion is a package that converts 5G NR properties from 3GPP pre-defined tables or formulas.
 package nrConversion
 
 // QciQos represents data structures for 5QI table with its Qos requirements.
