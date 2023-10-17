@@ -1,5 +1,7 @@
 package nrConversion
 
+import "errors"
+
 // NumerologyFreqDomain represents data structures for Numerology table with its frequency domain conversion.
 // The data structures associated to variable NumerologyScsTable.
 type NumerologyFreqDomain struct {
@@ -20,14 +22,13 @@ var NumerologyScsTable = []NumerologyFreqDomain{
 // NumerologyToScs converts the Numerology to Sub Carrier Spacing based on NumerologyScsTable.
 //   - numerology refers to Numerology within the range of NumerologyScsTable.
 //   - The function will return Scs within the range of NumerologyScsTable.
-//   - The function will return -1 error if the input is out of range.
-func NumerologyToScs(numerology int) int {
+func NumerologyToScs(numerology int) (interface{}, error) {
 	for _, NumerologyFreqDomain := range NumerologyScsTable {
 		if NumerologyFreqDomain.Numerology == numerology {
-			return NumerologyFreqDomain.Scs
+			return NumerologyFreqDomain.Scs, nil
 		}
 	}
-	return -1
+	return nil, errors.New("out of range")
 }
 
 // NumerologyTimeDomain represents data structures for Numerology table with its time domain conversion.
@@ -54,38 +55,35 @@ var NumerologyTimeTable = []NumerologyTimeDomain{
 // NumerologyToSymbolPerSlot converts the Numerology to Symbol/Slot based on NumerologyTimeTable.
 //   - numerology refers to Numerology within the range of NumerologyTimeTable.
 //   - The function will return SymbolPerSlot within the range of NumerologyTimeTable.
-//   - The function will return -1 error if the input is out of range.
-func NumerologyToSymbolPerSlot(numerology int) int {
+func NumerologyToSymbolPerSlot(numerology int) (interface{}, error) {
 	for _, NumerologyTimeDomain := range NumerologyTimeTable {
 		if NumerologyTimeDomain.Numerology == numerology {
-			return NumerologyTimeDomain.SymbolPerSlot
+			return NumerologyTimeDomain.SymbolPerSlot, nil
 		}
 	}
-	return -1
+	return nil, errors.New("out of range")
 }
 
 // NumerologyToSlotPerSubframe converts the Numerology to Slot/Subframe based on NumerologyTimeTable.
 //   - numerology refers to Numerology within the range of NumerologyTimeTable.
 //   - The function will return SlotPerSubframe within the range of NumerologyTimeTable.
-//   - The function will return -1 error if the input is out of range.
-func NumerologyToSlotPerSubframe(numerology int) int {
+func NumerologyToSlotPerSubframe(numerology int) (interface{}, error) {
 	for _, NumerologyTimeDomain := range NumerologyTimeTable {
 		if NumerologyTimeDomain.Numerology == numerology {
-			return NumerologyTimeDomain.SlotPerSubframe
+			return NumerologyTimeDomain.SlotPerSubframe, nil
 		}
 	}
-	return -1
+	return nil, errors.New("out of range")
 }
 
 // NumerologyToSlotPerFrame converts the Numerology to Slot/Frame based on NumerologyTimeTable.
 //   - numerology refers to Numerology within the range of NumerologyTimeTable.
 //   - The function will return SlotPerFrame within the range of NumerologyTimeTable.
-//   - The function will return -1 error if the input is out of range.
-func NumerologyToSlotPerFrame(numerology int) int {
+func NumerologyToSlotPerFrame(numerology int) (interface{}, error) {
 	for _, NumerologyTimeDomain := range NumerologyTimeTable {
 		if NumerologyTimeDomain.Numerology == numerology {
-			return NumerologyTimeDomain.SlotPerFrame
+			return NumerologyTimeDomain.SlotPerFrame, nil
 		}
 	}
-	return -1
+	return nil, errors.New("out of range")
 }

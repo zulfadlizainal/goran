@@ -47,13 +47,13 @@ const (
 
 // BandwidthToRB converts the Bandwidth to RB count based on BandwidthRbTable.
 //   - bandwidth refers to Bw within the range of BandwidthRbTable.
-//   - fr refers to Frequency Ranges const.
+//   - freqrange refers to Frequency Ranges const.
 //   - scs refers to Sub Carrier Spacing const.
 //   - The function will return RB count within the range of BandwidthRbTable.
-func BandwidthToRB(bandwidth int, fr string, scs int) (interface{}, error) {
+func BandwidthToRB(bandwidth int, freqrange string, scs int) (interface{}, error) {
 	for _, BandwidthRb := range BandwidthRbTable {
 		if BandwidthRb.Bw == bandwidth {
-			if fr == Sub6 {
+			if freqrange == Sub6 {
 				if scs == Scs15 {
 					return BandwidthRb.RbFr1Scs15, nil
 				} else if scs == Scs30 {
@@ -61,7 +61,7 @@ func BandwidthToRB(bandwidth int, fr string, scs int) (interface{}, error) {
 				} else if scs == Scs60 {
 					return BandwidthRb.RbFr1Scs60, nil
 				}
-			} else if fr == MmWave {
+			} else if freqrange == MmWave {
 				if scs == Scs60 {
 					return BandwidthRb.RbFr2Scs60, nil
 				} else if scs == Scs120 {

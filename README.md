@@ -41,25 +41,29 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	// Import goran package
-	// "github.com/zulfadlizainal/goran/pkg/<package-name>"
 	"github.com/zulfadlizainal/goran/pkg/nrConversion"
 )
 
 func main() {
 
-	bandwidth := 10
-	fr := "Sub6"
-	scs := 30 
+	// Define the input parameters
+	bandwidth := 20     // MHz
+	freqrange := "Sub6" // FR1
+	scs := 30           // 60 kHz
 
-	// Call function from the package
-	rbCount, err := nrConversion.BandwidthToRB(bandwidth, fr, scs)
+	// Call the function associated within the goran package
+	rbCount, err := nrConversion.BandwidthToRB(bandwidth, freqrange, scs)
+
+	// Stop the program if the function output error
 	if err != nil {
-		fmt.Printf(err)
-	} else {
-		fmt.Printf("RB count for %d MHz bandwidth in %s with %d kHz SCS: %v\n", bandwidth, fr, scs, rbCount)
+		log.Fatalf("Error: %v", err)
 	}
+
+	// Print the result
+	fmt.Printf("RB count = %vRB\n", rbCount)
 
 }
 ```
