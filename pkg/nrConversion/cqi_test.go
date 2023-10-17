@@ -3,8 +3,6 @@ package nrConversion
 import (
 	"reflect"
 	"testing"
-
-	"github.com/zulfadlizainal/goran/pkg/nrConversion"
 )
 
 func TestQCIToType(t *testing.T) {
@@ -24,7 +22,7 @@ func TestQCIToType(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.QCIToType(tt.args.qci)
+			got, err := QCIToType(tt.args.qci)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("QCIToType() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -53,7 +51,7 @@ func TestQCIToPriority(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.QCIToPriority(tt.args.qci)
+			got, err := QCIToPriority(tt.args.qci)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("QCIToPriority() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -82,7 +80,7 @@ func TestQCIToPacketDelay(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.QCIToPacketDelay(tt.args.qci)
+			got, err := QCIToPacketDelay(tt.args.qci)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("QCIToPacketDelay() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -111,7 +109,7 @@ func TestQCIToPacketLoss(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.QCIToPacketLoss(tt.args.qci)
+			got, err := QCIToPacketLoss(tt.args.qci)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("QCIToPacketLoss() error = %v, wantErr %v", err, tt.wantErr)
 				return

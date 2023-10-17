@@ -82,7 +82,7 @@ To be updated.
 
 ```bash
 git clone github.com/zulfadlizainal/goran.git # Clone repository.
-cd goran/test # Go to test directory.
+cd goran/pkg/<package-name> # Go to test directory.
 go test # Run Go test.
 ```
 

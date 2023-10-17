@@ -3,8 +3,6 @@ package nrConversion
 import (
 	"reflect"
 	"testing"
-
-	"github.com/zulfadlizainal/goran/pkg/nrConversion"
 )
 
 func TestBandwidthToRB(t *testing.T) {
@@ -29,7 +27,7 @@ func TestBandwidthToRB(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.BandwidthToRB(tt.args.bandwidth, tt.args.fr, tt.args.scs)
+			got, err := BandwidthToRB(tt.args.bandwidth, tt.args.fr, tt.args.scs)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("BandwidthToRB() error = %v, wantErr %v", err, tt.wantErr)
 				return
