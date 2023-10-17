@@ -2,8 +2,6 @@ package nrPathloss
 
 import (
 	"testing"
-
-	"github.com/zulfadlizainal/goran/pkg/nrPathloss"
 )
 
 func TestFreeSpace(t *testing.T) {
@@ -22,7 +20,7 @@ func TestFreeSpace(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := nrPathloss.FreeSpace(tt.args.distance, tt.args.freq, tt.args.gaintx, tt.args.gainrx); got != tt.want {
+			if got := FreeSpace(tt.args.distance, tt.args.freq, tt.args.gaintx, tt.args.gainrx); got != tt.want {
 				t.Errorf("FreeSpace() = %v, want %v", got, tt.want)
 			}
 		})

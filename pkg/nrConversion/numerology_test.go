@@ -3,8 +3,6 @@ package nrConversion
 import (
 	"reflect"
 	"testing"
-
-	"github.com/zulfadlizainal/goran/pkg/nrConversion"
 )
 
 func TestNumerologyToScs(t *testing.T) {
@@ -26,7 +24,7 @@ func TestNumerologyToScs(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.NumerologyToScs(tt.args.numerology)
+			got, err := NumerologyToScs(tt.args.numerology)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("NumerologyToScs() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -59,7 +57,7 @@ func TestNumerologyToSymbolPerSlot(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.NumerologyToSymbolPerSlot(tt.args.numerology)
+			got, err := NumerologyToSymbolPerSlot(tt.args.numerology)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("NumerologyToSymbolPerSlot() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -92,7 +90,7 @@ func TestNumerologyToSlotPerSubframe(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.NumerologyToSlotPerSubframe(tt.args.numerology)
+			got, err := NumerologyToSlotPerSubframe(tt.args.numerology)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("NumerologyToSlotPerSubframe() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -125,7 +123,7 @@ func TestNumerologyToSlotPerFrame(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := nrConversion.NumerologyToSlotPerFrame(tt.args.numerology)
+			got, err := NumerologyToSlotPerFrame(tt.args.numerology)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("NumerologyToSlotPerFrame() error = %v, wantErr %v", err, tt.wantErr)
 				return
