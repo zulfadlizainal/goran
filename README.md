@@ -13,9 +13,9 @@
 
 #### Documentations
 
-[![Static Badge](https://img.shields.io/badge/goran-Docs-blue)](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg)
+Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg). 
 
-Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
+[![Static Badge](https://img.shields.io/badge/goran-Docs-blue)](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg)
 
 #### Supported Packages
 
@@ -119,6 +119,7 @@ go test # Run Go test.
 4. Calculate impact of measurement gap to downlink throughput.
 5. Examples of goran packages usage.
 ```
+
 ![Static Badge](https://img.shields.io/badge/Coding-8A2BE2)
 
 ```markdown
@@ -129,8 +130,6 @@ go test # Run Go test.
 3. Include error control. Return value for error is flexible but need to specify.
 4. Lint code using official go.dev linter.
 ```
-
-![Static Badge](https://img.shields.io/badge/Support-8A2BE2)
 
 <br><a href="https://www.buymeacoffee.com/zulfadlizainal" target="blank"><img src="https://cdn.ko-fi.com/cdn/kofi2.png?v=2" alt="Buy Me A Coffee" height="37.5" width="127.5"></a>
 
