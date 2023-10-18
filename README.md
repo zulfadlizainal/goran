@@ -19,9 +19,7 @@ Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadli
 
 #### Supported Packages
 
-<img src="https://img.shields.io/badge/Packages-8A2BE2" alt="Packages">
-
-<!-- ![Static Badge](https://img.shields.io/badge/Packages-8A2BE2) -->
+[![Static Badge](https://img.shields.io/badge/Packages-8A2BE2)](https://github.com/zulfadlizainal/goran#supported-packages)
 
 ```markdown
 
@@ -43,7 +41,7 @@ Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadli
 
 #### Getting Started
 
-![Static Badge](https://img.shields.io/badge/Install-8A2BE2)
+[![Static Badge](https://img.shields.io/badge/Install-8A2BE2)](https://github.com/zulfadlizainal/goran#getting-started)
 
 ```bash
 # Go to project directory.
@@ -59,7 +57,7 @@ go get github.com/zulfadlizainal/goran
 go get -u github.com/zulfadlizainal/goran
 ```
 
-![Static Badge](https://img.shields.io/badge/Use-8A2BE2)
+[![Static Badge](https://img.shields.io/badge/Use-8A2BE2)](https://github.com/zulfadlizainal/goran#getting-started)
 
 ```go
 package main
@@ -92,7 +90,7 @@ func main() {
 
 #### Verification
 
-![Static Badge](https://img.shields.io/badge/Test-8A2BE2)
+[![Static Badge](https://img.shields.io/badge/Test-8A2BE2)](https://github.com/zulfadlizainal/goran#verification)
 
 ```bash
 git clone github.com/zulfadlizainal/goran.git # Clone repository.
@@ -102,7 +100,7 @@ go test # Run Go test.
 
 #### Contribution
 
-![Static Badge](https://img.shields.io/badge/Roadmap-8A2BE2)
+[![Static Badge](https://img.shields.io/badge/Roadmap-8A2BE2)](https://github.com/zulfadlizainal/goran#contribution)
 
 ```markdown
 # What to Build
@@ -122,7 +120,7 @@ go test # Run Go test.
 5. Examples of goran packages usage.
 ```
 
-![Static Badge](https://img.shields.io/badge/Coding-8A2BE2)
+[![Static Badge](https://img.shields.io/badge/Coding-8A2BE2)](https://github.com/zulfadlizainal/goran#contribution)
 
 ```markdown
 # Guidelines
