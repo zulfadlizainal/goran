@@ -19,7 +19,9 @@ Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadli
 
 #### Supported Packages
 
-![Static Badge](https://img.shields.io/badge/Packages-8A2BE2)
+<img src="https://img.shields.io/badge/Packages-8A2BE2" alt="Packages">
+
+<!-- ![Static Badge](https://img.shields.io/badge/Packages-8A2BE2) -->
 
 ```markdown
 
