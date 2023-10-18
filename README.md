@@ -3,25 +3,45 @@
 
 ## goran
 
-`goran` is 5G NR radio access network tools that commonly used by telecom RF engineers. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran). The project is written in Go.
+`goran` is 5G NR radio access network packages that commonly used in the workflow of telecom RF engineers for simulations and calculations. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran). The project is written in Go.
 
 [![CI](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml/badge.svg)](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml)
 
 <br>
-<img src="https://raw.githubusercontent.com/zulfadlizainal/goran/main/assets/logo.png" width=30% height=30% />
+<img src="https://raw.githubusercontent.com/zulfadlizainal/goran/main/assets/logo.png" width=20% height=20% />
 <br>
 
 #### Documentations
+
+[![Static Badge](https://img.shields.io/badge/goran-Docs-blue)](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg)
 
 Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
 
 #### Supported Packages
 
-[Packages Index](https://raw.githubusercontent.com/zulfadlizainal/goran/main/docs/packages_index.md) list.
+![Static Badge](https://img.shields.io/badge/Packages-8A2BE2)
+
+```markdown
+
+| Technology | Package      | Function                      | Purpose                                          |
+|------------|--------------|-------------------------------|--------------------------------------------------|
+| 5G NR      | nrConversion | NumerologyToScs()             | Converts Numerology (µ) to SCS (kHz)             |
+| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
+| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
+| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    | Converts Numerology (µ) to Slot/Frame (Count)    |
+| 5G NR      | nrConversion | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
+| 5G NR      | nrConversion | QCIToPriority()               | Converts 5QI to Priority                         |
+| 5G NR      | nrConversion | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
+| 5G NR      | nrConversion | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
+| 5G NR      | nrConversion | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
+| 5G NR      | nrDownlink   | Tbs()                         | Calculates Transport Block Size (Bytes)          |
+| 5G NR      | nrPathloss   | FreeSpace()                   | Generate Free Space Path Loss (dB)               |
+
+```
 
 #### Getting Started
 
-Installation:
+![Static Badge](https://img.shields.io/badge/Install-8A2BE2)
 
 ```bash
 # Go to project directory.
@@ -32,9 +52,12 @@ go mod init <module-name>
 
 # Download `goran` package.
 go get github.com/zulfadlizainal/goran 
+
+# Get updated package. (Optional)
+go get -u github.com/zulfadlizainal/goran
 ```
 
-Using it in your project:
+![Static Badge](https://img.shields.io/badge/Use-8A2BE2)
 
 ```go
 package main
@@ -49,36 +72,25 @@ import (
 
 func main() {
 
-	// Define the input parameters
-	bandwidth := 20     // MHz
-	freqrange := "Sub6" // FR1
-	scs := 30           // 60 kHz
+	bandwidth := 20
+	freqrange := "Sub6" 
+	scs := 30 
 
-	// Call the function associated within the goran package
+	// Call the function
 	rbCount, err := nrConversion.BandwidthToRB(bandwidth, freqrange, scs)
 
-	// Stop the program if the function output error
 	if err != nil {
 		log.Fatalf("Error: %v", err)
 	}
 
-	// Print the result
 	fmt.Printf("RB count = %vRB\n", rbCount)
 
 }
 ```
 
-Once in a while, update the package to the latest version:
+#### Verification
 
-```bash
-go get -u github.com/zulfadlizainal/goran
-```
-
-#### Examples
-
-To be updated.
-
-#### Test Packages
+![Static Badge](https://img.shields.io/badge/Test-8A2BE2)
 
 ```bash
 git clone github.com/zulfadlizainal/goran.git # Clone repository.
@@ -86,24 +98,45 @@ cd goran/pkg/<package-name> # Go to test directory.
 go test # Run Go test.
 ```
 
-#### Contribution Guidelines
+#### Contribution
+
+![Static Badge](https://img.shields.io/badge/Roadmap-8A2BE2)
 
 ```markdown
 # What to Build
+
 1. Flexible. No explicit roadmap. 
 2. Build functions to address common RF engineers workflow.
 3. Avoid functions creation for non-existing problems.
+```
 
-# Coding Standards
+```markdown
+# Wish List
+
+1. Generate urban and rural path loss.
+2. Convert MCS table.
+3. Calculate SS-RSRP, SS-RSRQ, SS-SINR.
+4. Calculate impact of measurement gap to downlink throughput.
+5. Examples of goran packages usage.
+```
+![Static Badge](https://img.shields.io/badge/Coding-8A2BE2)
+
+```markdown
+# Guidelines
+
 1. Include comprehensive comments for the codes. Documentation is automated based on the comments.
 2. Include test for each functions with desired and undesired input.
-3. Include error control for undesired inputs. Return value for error is flexible but need to specify.
+3. Include error control. Return value for error is flexible but need to specify.
 4. Lint code using official go.dev linter.
 ```
 
+![Static Badge](https://img.shields.io/badge/Support-8A2BE2)
+
+<br><a href="https://www.buymeacoffee.com/zulfadlizainal" target="blank"><img src="https://cdn.ko-fi.com/cdn/kofi2.png?v=2" alt="Buy Me A Coffee" height="37.5" width="127.5"></a>
+
 #### Licenses
 
-[GNU AFFERO GENERAL PUBLIC LICENSE](https://github.com/zulfadlizainal/goran/blob/main/LICENSE).
+GNU AFFERO GPL Version 3
 
 </small>
 </span>
