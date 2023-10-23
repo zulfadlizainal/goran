@@ -1,17 +1,16 @@
-name: CI
+name: Test
 
 on:
   push:
     branches:
       - main
-      - development
   pull_request:
     branches:
       - main
 
 jobs:
   test:
-    name: Go Packages Test
+    name: goran Packages Test
     runs-on: ubuntu-latest
     
     steps:
