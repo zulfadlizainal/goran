@@ -25,17 +25,20 @@ Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadli
 
 | Technology | Package      | Function                      | Purpose                                          |
 |------------|--------------|-------------------------------|--------------------------------------------------|
+| 5G NR      | nrConversion | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
+| 5G NR      | nrConversion | McsToQm()                     | Converts MCS to Modulation Order (bits/Symbol)   |
+| 5G NR      | nrConversion | McsToR()                      | Converts MCS to Target Code Rate (R)             |
+| 5G NR      | nrConversion | McsToSe()                     | Converts MCS to Spectral Efficiency (bps/Hz)     |
 | 5G NR      | nrConversion | NumerologyToScs()             | Converts Numerology (µ) to SCS (kHz)             |
-| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
-| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
 | 5G NR      | nrConversion | NumerologyToSlotPerFrame()    | Converts Numerology (µ) to Slot/Frame (Count)    |
-| 5G NR      | nrConversion | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
-| 5G NR      | nrConversion | QCIToPriority()               | Converts 5QI to Priority                         |
+| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
+| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
 | 5G NR      | nrConversion | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
 | 5G NR      | nrConversion | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
-| 5G NR      | nrConversion | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
+| 5G NR      | nrConversion | QCIToPriority()               | Converts 5QI to Priority                         |
+| 5G NR      | nrConversion | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
 | 5G NR      | nrDownlink   | Tbs()                         | Calculates Transport Block Size (Bytes)          |
-| 5G NR      | nrPathloss   | FreeSpace()                   | Generate Free Space Path Loss (dB)               |
+| 5G NR      | nrPathloss   | FreeSpace()                   | Generates Free Space Path Loss (dB)              |
 
 ```
 
@@ -114,10 +117,9 @@ go test # Run Go test.
 # Wish List
 
 1. Generate urban and rural path loss.
-2. Convert MCS table.
-3. Calculate SS-RSRP, SS-RSRQ, SS-SINR.
-4. Calculate impact of measurement gap to downlink throughput.
-5. Examples of goran packages usage.
+2. Calculate SS-RSRP, SS-RSRQ, SS-SINR.
+3. Calculate impact of measurement gap to downlink throughput.
+4. Examples of goran packages usage.
 ```
 
 [![Static Badge](https://img.shields.io/badge/Coding-8A2BE2)](https://github.com/zulfadlizainal/goran#contribution)
