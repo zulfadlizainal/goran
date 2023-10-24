@@ -24,22 +24,23 @@ Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadli
 
 ```markdown
 
-| Technology | Package      | Function                      | Purpose                                          |
-|------------|--------------|-------------------------------|--------------------------------------------------|
-| 5G NR      | nrConversion | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
-| 5G NR      | nrConversion | McsToQm()                     | Converts MCS to Modulation Order (bits/Symbol)   |
-| 5G NR      | nrConversion | McsToR()                      | Converts MCS to Target Code Rate (R)             |
-| 5G NR      | nrConversion | McsToSe()                     | Converts MCS to Spectral Efficiency (bps/Hz)     |
-| 5G NR      | nrConversion | NumerologyToScs()             | Converts Numerology (µ) to SCS (kHz)             |
-| 5G NR      | nrConversion | NumerologyToSlotPerFrame()    | Converts Numerology (µ) to Slot/Frame (Count)    |
-| 5G NR      | nrConversion | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
-| 5G NR      | nrConversion | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
-| 5G NR      | nrConversion | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
-| 5G NR      | nrConversion | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
-| 5G NR      | nrConversion | QCIToPriority()               | Converts 5QI to Priority                         |
-| 5G NR      | nrConversion | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
-| 5G NR      | nrDownlink   | Tbs()                         | Calculates Transport Block Size (Bytes)          |
-| 5G NR      | nrPathloss   | FreeSpace()                   | Generates Free Space Path Loss (dB)              |
+| Technology | Package       | Function                      | Purpose                                          |
+|------------|---------------|-------------------------------|--------------------------------------------------|
+| 5G NR      | nrConversion  | BandwidthToRB()               | Converts Bandwidth (MHz) to RB (Count)           |
+| 5G NR      | nrConversion  | McsToQm()                     | Converts MCS to Modulation Order (bits/Symbol)   |
+| 5G NR      | nrConversion  | McsToR()                      | Converts MCS to Target Code Rate (R)             |
+| 5G NR      | nrConversion  | McsToSe()                     | Converts MCS to Spectral Efficiency (bps/Hz)     |
+| 5G NR      | nrConversion  | NumerologyToScs()             | Converts Numerology (µ) to SCS (kHz)             |
+| 5G NR      | nrConversion  | NumerologyToSlotPerFrame()    | Converts Numerology (µ) to Slot/Frame (Count)    |
+| 5G NR      | nrConversion  | NumerologyToSlotPerSubframe() | Converts Numerology (µ) to Slot/Subframe (Count) |
+| 5G NR      | nrConversion  | NumerologyToSymbolPerSlot()   | Converts Numerology (µ) to Symbol/Slot (Count)   |
+| 5G NR      | nrConversion  | QCIToPacketDelay()            | Converts 5QI to Packet Delay (ms)                |
+| 5G NR      | nrConversion  | QCIToPacketLoss()             | Converts 5QI to Packet Loss Rate (%)             |
+| 5G NR      | nrConversion  | QCIToPriority()               | Converts 5QI to Priority                         |
+| 5G NR      | nrConversion  | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
+| 5G NR      | nrDownlink    | Tbs()                         | Calculates Transport Block Size (Bytes)          |
+| 5G NR      | nrMeasurement | SsRsrp()                      | Calculates SS-RSRP (dBm)                         |
+| 5G NR      | nrPathloss    | FreeSpace()                   | Generates Free Space Path Loss (dB)              |
 
 ```
 
@@ -118,7 +119,7 @@ go test # Run Go test.
 # Wish List
 
 1. Generate urban and rural path loss.
-2. Calculate SS-RSRP, SS-RSRQ, SS-SINR.
+2. Calculate SS-RSRQ, SS-SINR.
 3. Calculate impact of measurement gap to downlink throughput.
 4. Examples of goran packages usage.
 ```
@@ -128,10 +129,10 @@ go test # Run Go test.
 ```markdown
 # Guidelines
 
-1. Include comprehensive comments for the codes. Documentation is automated based on the comments.
-2. Include test for each functions with desired and undesired input.
-3. Include error control. Return value for error is flexible but need to specify.
-4. Lint code using official go.dev linter.
+1. No dependencies outside Go standard library.
+2. Include comprehensive comments for the codes. Documentation is automated based on the comments.
+3. Include test for each functions with desired and undesired input.
+4. Include error control. Return value for error is flexible but need to specify.
 ```
 
 <br><a href="https://www.buymeacoffee.com/zulfadlizainal" target="blank"><img src="https://cdn.ko-fi.com/cdn/kofi2.png?v=2" alt="Buy Me A Coffee" height="37.5" width="127.5"></a>
