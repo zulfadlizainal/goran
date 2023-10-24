@@ -3,9 +3,10 @@
 
 ## goran
 
-`goran` is 5G NR radio access network packages that commonly used in the workflow of telecom RF engineers for simulations and calculations. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran). The project is written in Go.
+`goran` is 5G NR radio access network packages that commonly used in the workflow of telecom RF engineers for simulations and calculations. Visit `goran` project landing page here -> [go.dev///goran](https://pkg.go.dev/github.com/zulfadlizainal/goran).
 
 [![CI](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml/badge.svg)](https://github.com/zulfadlizainal/goran/actions/workflows/go_pkgtest.yaml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/zulfadlizainal/goran.svg)](https://pkg.go.dev/github.com/zulfadlizainal/goran)
 
 <br>
 <img src="https://raw.githubusercontent.com/zulfadlizainal/goran/main/assets/logo.png" width=20% height=20% />
@@ -13,9 +14,9 @@
 
 #### Documentations
 
-Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg). 
-
 [![Static Badge](https://img.shields.io/badge/goran-Docs-blue)](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg)
+
+Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg). 
 
 #### Supported Packages
 
