@@ -40,6 +40,7 @@ Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadli
 | 5G NR      | nrConversion  | QCIToType()                   | Converts 5QI to Bit Rate Type                    |
 | 5G NR      | nrDownlink    | Tbs()                         | Calculates Transport Block Size (Bytes)          |
 | 5G NR      | nrMeasurement | SsRsrp()                      | Calculates SS-RSRP (dBm)                         |
+| 5G NR      | nrMeasurement | SsRsrq()                      | Calculates SS-RSRQ (dB)                          |
 | 5G NR      | nrPathloss    | FreeSpace()                   | Generates Free Space Path Loss (dB)              |
 
 ```
@@ -119,9 +120,10 @@ go test # Run Go test.
 # Wish List
 
 1. Generate urban and rural path loss.
-2. Calculate SS-RSRQ, SS-SINR.
-3. Calculate impact of measurement gap to downlink throughput.
-4. Examples of goran packages usage.
+2. Calculate RSSI, SS-SINR.
+3. Calculate PRACH power control, PUSCH power control. 
+4. Calculate impact of measurement gap to downlink throughput.
+5. Examples of goran packages usage.
 ```
 
 [![Static Badge](https://img.shields.io/badge/Coding-8A2BE2)](https://github.com/zulfadlizainal/goran#contribution)
