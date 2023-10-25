@@ -13,4 +13,5 @@
 5G NR,nrConversion,QCIToType(),Converts 5QI to Bit Rate Type
 5G NR,nrDownlink,Tbs(),Calculates Transport Block Size (Bytes)
 5G NR,nrMeasurement,SsRsrp(),Calculates SS-RSRP (dBm)
+5G NR,nrMeasurement,SsRsrq(),Calculates SS-RSRQ (dB)
 5G NR,nrPathloss,FreeSpace(),Generates Free Space Path Loss (dB)
