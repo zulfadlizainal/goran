@@ -1,4 +1,4 @@
-name: Test
+name: build
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: goran Packages Test
+    name: goran packages test
     runs-on: ubuntu-latest
     
     steps:

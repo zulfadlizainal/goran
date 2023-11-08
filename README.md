@@ -16,7 +16,9 @@
 
 [![Static Badge](https://img.shields.io/badge/goran-Docs-blue)](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg)
 
-Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg). 
+Visit official documentations page [here](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg).
+
+*Force official documentations re-indexing to update to latest version: Click [Link1](https://proxy.golang.org/github.com/zulfadlizainal/goran/@latest) and [Link2](https://pkg.go.dev/github.com/zulfadlizainal/goran/pkg) and wait for a moment.*
 
 #### Supported Packages
 
